@@ -8,42 +8,46 @@
 
 @layer base {
   body {
-    @apply antialiased;
+    @apply antialiased bg-black text-zinc-100;
   }
 }
 
-/* Custom Scrollbar */
+/* Custom Scrollbar - Dark Theme */
 ::-webkit-scrollbar {
   width: 6px;
 }
 
 ::-webkit-scrollbar-track {
-  background: transparent;
+  background: #000;
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply bg-slate-200 rounded-full;
+  @apply bg-zinc-800 rounded-full;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  @apply bg-slate-300;
+  @apply bg-zinc-700;
 }
 
-/* Markdown Styles */
+/* Markdown Styles for Dark Theme */
+.prose {
+  @apply text-zinc-300;
+}
+
 .prose p {
   @apply mb-2 last:mb-0 leading-relaxed;
 }
 
 .prose code {
-  @apply px-1.5 py-0.5 rounded bg-slate-100 font-mono text-indigo-600 font-medium;
+  @apply px-1.5 py-0.5 rounded bg-zinc-800 font-mono text-indigo-400 font-medium;
 }
 
 .prose pre {
-  @apply p-4 rounded-xl bg-slate-900 overflow-x-auto my-4;
+  @apply p-4 rounded-xl bg-zinc-900/50 border border-zinc-800 overflow-x-auto my-4;
 }
 
 .prose pre code {
-  @apply p-0 bg-transparent text-slate-100 text-sm font-normal;
+  @apply p-0 bg-transparent text-zinc-200 text-sm font-normal;
 }
 
 .prose ul, .prose ol {
@@ -51,5 +55,13 @@
 }
 
 .prose li {
-  @apply ml-4 list-disc;
+  @apply ml-4 list-disc text-zinc-400;
+}
+
+.prose strong {
+  @apply text-zinc-100 font-semibold;
+}
+
+.prose h1, .prose h2, .prose h3 {
+  @apply text-zinc-100 font-bold mb-4;
 }
